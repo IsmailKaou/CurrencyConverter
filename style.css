@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  background-color: #ffffff;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  background-color: aquamarine;
+  width: 120px;
+  height: 120px;
+  top: 20%;
+  left: 15%;
+  filter: blur(90px);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(219, 49, 227);
+  width: 120px;
+  height: 120px;
+  bottom: 20%;
+  right: 15%;
+  filter: blur(100px);
+}
+
+.container {
+  width: 25rem;
+  color: black;
+  background-color: rgba(230, 230, 230, 0.44);
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.container form {
+  margin: 20px 0 10px 0;
+}
+
+.container form p {
+  font-size: 1rem;
+  margin-bottom: 7px;
+}
+
+.container form input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.container form input:hover {
+  border: 1px solid rgba(219, 49, 227, 0.5);
+}
+.container form input:focus {
+  border: 1px solid rgba(219, 49, 227, 0.5);
+  /* padding: 0 14px; */
+}
+
+.container form .convert-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.container form .from,
+.container form .to {
+  width: 100%;
+}
+
+.container form .convert-box .select-input {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.container form .convert-box .select-input:hover {
+  border: 1px solid rgba(219, 49, 227, 0.5);
+}
+
+.container form .convert-box .select-input img {
+  max-width: 25px;
+}
+
+.container form .convert-box .select-input select {
+  width: 100%;
+  background: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0 -5px 0 5px;
+}
+
+.container form .convert-box .select-input select option {
+  color: black;
+}
+
+.container form .convert-box .reverse {
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  transform: rotate(90deg);
+  transition: all 0.3s ease;
+}
+
+.container form .convert-box .reverse:hover {
+  color: rgba(219, 49, 227, 0.7);
+}
+
+.container form .result {
+  font-size: 1.2rem;
+  margin: 20px;
+}
+
+.container form button {
+  width: 100%;
+  height: 45px;
+  font-size: 1rem;
+  border-radius: 5px;
+  background: #ccc;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.container form button:hover {
+  background: rgba(219, 49, 227, 0.7);
+}
