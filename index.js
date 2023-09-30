@@ -1,6 +1,6 @@
 const fromCur = document.querySelector(".from select");
 const toCur = document.querySelector(".to select");
-// const Btn = document.querySelector("form button");
+const Btn = document.querySelector("form button");
 const exIcon = document.querySelector("form .reverse");
 const result = document.querySelector("form .result");
 const amount = document.querySelector("form input");
@@ -45,10 +45,11 @@ async function getExchangeRate() {
 }
 
 window.addEventListener("load", getExchangeRate);
-// Btn.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   getExchangeRate();
-// });
+Btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  // getExchangeRate();
+  socket();
+});
 
 exIcon.addEventListener("click", () => {
   [fromCur.value, toCur.value] = [toCur.value, fromCur.value];
@@ -66,3 +67,7 @@ fromCur.addEventListener("input", getExchangeRate);
 toCur.addEventListener("input", getExchangeRate);
 
 amount.addEventListener("input", getExchangeRate);
+
+function socket() {
+  let socket = new WebSocket("ws://127.0.0.1:7777?message=HelloFromJs");
+}
